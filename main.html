@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chính</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="control2.html">Điều Khiển Băng Chuyền</a></li>
+                <li><a href="control1.html">Điều Khiển Chung</a></li>
+                <li><a href="statistics.html">Thống kê sản phẩm</a></li>
+                <li><a href="index.html" onclick="logout()">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="conveyor-section">
+            <!-- Bảng 1: Băng chuyền 1 -->
+            <div class="container">
+                <h2>Băng chuyền 1</h2>
+                <table>
+                    <tr><th>Trạng Thái</th><td><span id="status1-running">Loading...</span></td></tr>
+                    <tr><th>Màu</th><td><span id="status1-color">Loading...</span></td></tr>
+                    <tr><th>Vật Đi Qua 1</th><td><span id="status1-passed1">Loading...</span></td></tr>
+                    <tr><th>Vật Đi Qua 2</th><td><span id="status1-passed2">Loading...</span></td></tr>
+                    <tr><th>Trạng Thái Cánh Tay Robot</th><td><span id="status1-grab">Loading...</span></td></tr>
+                </table>
+            </div>
+
+            <!-- Bảng 2: Băng chuyền 2 -->
+            <div class="container">
+                <h2>Băng chuyền 2</h2>
+                <table>
+                    <tr><th>Trạng Thái</th><td><span id="status2-running">Loading...</span></td></tr>
+                    <tr><th>Số Lượng</th><td><span id="status2-quantity">Loading...</span></td></tr>
+                    <tr><th>Số Gói Hàng</th><td><span id="status2-packages">Loading...</span></td></tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

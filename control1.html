@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều khiển băng chuyền</title>
+    <link rel="stylesheet" href="control1.css"> <!-- Nhúng tệp CSS -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    <script src="control1.js" defer></script> <!-- Nhúng tệp JavaScript -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Trang chính</a></li>
+                <li><a href="control2.html">Điều Khiển Chung</a></li>
+                <li><a href="statistics.html">Thống kê sản phẩm</a></li>
+                <li><a href="index.html" onclick="logout()">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="control-container">
+        <div class="belt-control">
+            <h1>Băng chuyền 1</h1>
+            <div class="button-group">
+                <button onclick="controlBelt('start1')">Bắt đầu</button>
+                <button onclick="controlBelt('stop1')">Dừng lại</button>
+            </div>
+            <div id="status1">
+                <h2>Trạng thái băng chuyền 1:</h2>
+                <p id="beltStatus1">Chưa được điều khiển</p>
+            </div>
+        </div>
+        <div class="belt-control">
+            <h1>Băng chuyền 2</h1>
+            <div class="button-group">
+                <button onclick="controlBelt('start2')">Bắt đầu</button>
+                <button onclick="controlBelt('stop2')">Dừng lại</button>
+            </div>
+            <div id="status2">
+                <h2>Trạng thái băng chuyền 2:</h2>
+                <p id="beltStatus2">Chưa được điều khiển</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

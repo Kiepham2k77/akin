@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều khiển hệ thống</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script src="control2.js" defer></script> <!-- Nhúng tệp JavaScript -->
+    <link rel="stylesheet" href="control2.css"> <!-- Nhúng tệp CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Trang chính</a></li>
+                <li><a href="control1.html">Điều Khiển Băng Chuyền</a></li>
+                <li><a href="statistics.html">Thống kê sản phẩm</a></li>
+                <li><a href="index.html" onclick="logout()">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="control-container">
+            <!-- Băng chuyền 1 -->
+            <div class="belt-group">
+                <h2>Băng chuyền 1</h2>
+                <div class="button-group">
+                    <button onclick="controlSystem('red1')">Đỏ</button>
+                    <button onclick="controlSystem('green1')">Xanh lá</button>
+                    <button onclick="controlSystem('blue1')">Xanh dương</button>
+                </div>
+                <div class="button-group">
+                    <button onclick="controlSystem('error1')">Lỗi</button>
+                </div>
+                <div class="status-bar" id="status1">
+                    Trạng thái: Chưa điều khiển
+                </div>
+            </div>
+            <!-- Băng chuyền 2 -->
+            <div class="belt-group">
+                <h2>Băng chuyền 2</h2>
+                <div class="button-group">
+                    <button onclick="controlSystem('column2')">Cột</button>
+                    <button onclick="controlSystem('increase2')">Tăng</button>
+                    <button onclick="controlSystem('decrease2')">Giảm</button>
+                </div>
+                <div class="button-group">
+                    <button onclick="controlSystem('startStop2')">Bắt đầu/Dừng lại</button>
+                </div>
+                <div class="status-bar" id="status2">
+                    Trạng thái: Chưa điều khiển
+                </div>
+                <div class="flex justify-center space-x-2">
+                    <div class="bg-white border rounded-full px-4 py-2 shadow-md">0</div>
+                    <div class="bg-white border rounded-full px-4 py-2 shadow-md">0</div>
+                    <div class="bg-white border rounded-full px-4 py-2 shadow-md">0</div>
+                    <div class="bg-white border rounded-full px-4 py-2 shadow-md">0</div> <!-- Cột số thứ tư -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Reset một số kiểu mặc định của trình duyệt */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    /* Nền gradient từ xanh dương đến xanh lá */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient màu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Chiều cao toàn bộ viewport */
+}
+
+.login-container {
+    background-color: #fff; /* Nền trắng cho form */
+    border-radius: 8px; /* Bo tròn các góc */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+    padding: 30px; /* Padding cho form */
+    width: 350px; /* Chiều rộng cố định cho form */
+}
+
+h1 {
+    font-size: 26px; /* Kích thước tiêu đề */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+    color: #333; /* Màu chữ tối */
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+p {
+    margin-bottom: 20px; /* Khoảng cách dưới đoạn văn */
+    color: #666; /* Màu chữ nhạt */
+    text-align: center; /* Căn giữa đoạn văn */
+}
+
+label {
+    display: block; /* Hiển thị label theo dạng khối */
+    margin-bottom: 5px; /* Khoảng cách dưới label */
+    color: #333; /* Màu chữ tối */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%; /* Chiều rộng đầy đủ cho các trường nhập */
+    padding: 12px; /* Padding bên trong trường nhập */
+    margin-bottom: 15px; /* Khoảng cách dưới trường nhập */
+    border: 1px solid #ccc; /* Đường viền nhạt */
+    border-radius: 4px; /* Bo tròn các góc */
+    box-sizing: border-box; /* Bao gồm padding và border trong chiều rộng */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển tiếp cho đường viền */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #6a11cb; /* Đổi màu đường viền khi focus */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px; /* Khoảng cách giữa checkbox và label */
+}
+
+.clearfix {
+    display: flex; /* Flexbox cho các nút */
+    justify-content: space-between; /* Khoảng cách giữa các nút */
+}
+
+button {
+    background-color: #4CAF50; /* Nền xanh lá cho nút */
+    color: white; /* Chữ trắng */
+    padding: 10px 15px; /* Padding bên trong nút */
+    border: none; /* Không có đường viền */
+    border-radius: 4px; /* Bo tròn các góc */
+    cursor: pointer; /* Con trỏ thay đổi khi hover */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp */
+}
+
+button:hover {
+    background-color: #45a049; /* Màu xanh lá đậm hơn khi hover */
+}
+
+.cancelbtn {
+    background-color: #f44336; /* Nền đỏ cho nút hủy */
+}
+
+.cancelbtn:hover {
+    background-color: #e53935; /* Màu đỏ đậm hơn khi hover */
+}
+
+#errorMessage {
+    margin-top: 10px; /* Khoảng cách trên thông báo lỗi */
+    font-size: 14px; /* Kích thước chữ cho thông báo lỗi */
+    color: red; /* Màu đỏ cho thông báo lỗi */
+    text-align: center; /* Căn giữa thông báo lỗi */
+}

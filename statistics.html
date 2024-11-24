@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống kê sản phẩm</title>
+    <link rel="stylesheet" href="statistics.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Trang chính</a></li>
+                <li><a href="control2.html">Điều khiển băng chuyền</a></li>
+                <li><a href="control1.html">Điều khiển chung</a></li>
+                <li><a href="index.html" onclick="logout()">Đăng xuất</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="statistics-container">
+        <h1>Thống kê sản phẩm</h1>
+
+        <!-- Chọn ngày để xem thống kê -->
+        <div class="date-input">
+            <label for="date">Chọn ngày:</label>
+            <input type="date" id="date" name="date">
+            <button onclick="getStatistics()">Xem thống kê</button>
+        </div>
+
+        <!-- Kết quả thống kê sẽ hiển thị ở đây -->
+        <div id="statisticsContent" class="statistics-content">
+            <p>Nhập ngày và nhấn nút "Xem thống kê" để xem dữ liệu.</p>
+        </div>
+    </div>
+
+    <!-- Liên kết tới Google Sheets API thông qua file ngao.js -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="ngao.js"></script>
+</body>
+</html>
